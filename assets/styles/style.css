@@ -5,9 +5,13 @@ body {
     position: relative;
   }
   
-footer {
+  footer {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+  }
+  
+  .content {
+    margin-bottom: 100px; /* die Höhe des Footers */
   }
