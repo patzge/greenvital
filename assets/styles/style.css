@@ -78,7 +78,7 @@ body {
       background: url(../images/banner-img-1.jpg) top/cover no-repeat;
   }
   #header_shop{
-    background: url(../images/banner-img-shop.jpg) top/cover no-repeat;
+      background: url(../images/banner-img-shop.jpg) top/cover no-repeat;
   }
   .carousel-inner h1{
       font-size: 60px;
@@ -166,7 +166,7 @@ body {
   
   /* newsletter */
   #newsletter{
-      background-color: rgba(179, 179, 179, 0.05);
+      /*background-color: rgba(179, 179, 179, 0.05);*/
   }
   #newsletter p{
       max-width: 600px;

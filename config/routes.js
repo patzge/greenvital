@@ -8,6 +8,8 @@
  * https://sailsjs.com/anatomy/config/routes-js
  */
 
+const ProductController = require("../api/controllers/ProductController");
+
 module.exports.routes = {
 
   /***************************************************************************
@@ -21,11 +23,24 @@ module.exports.routes = {
 
   '/': { view: 'pages/startseite' },
   '/start': { view: 'pages/index' },
-
+  'GET /shop': {view: 'pages/shop'},
 
 
   'GET /admin': {view: 'pages/admin'},
-  'GET /shop': {view: 'pages/shop'},
+
+  'GET /product/new': {controller: 'ProductController', action:'new'},
+  'POST /product': { controller: 'ProductController', action:'create' },
+  'GET /product': 'ProductController.find',
+  'GET /product/show': 'product.findOne',
+
+  'GET /product/:id/edit': { controller: 'ProductController', action: 'editOne' },
+  'POST /product/:id/update': { controller: 'ProductController', action: 'updateOne' },
+  'GET /product/:id/destroy': { controller: 'ProductController', action: 'destroyOne' },
+ 
+  'GET /category/new': { view: 'pages/category/new' },
+  'POST /category': { controller: 'CategoryController', action:'create' },
+  'GET /category/:id/destroy': { controller: 'CategoryController', action: 'destroyOne' },
+  'GET /category': { controller: 'CategoryController', action: 'find' },
 
   /***************************************************************************
   *                                                                          *

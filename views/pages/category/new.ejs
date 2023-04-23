@@ -1,0 +1,14 @@
+<div class="container">
+    <form action="/category" method="post" class="py-5">
+        <input type="hidden" name="_csrf" value="<%= _csrf %>"/>
+        <div>
+            <div class="form-group">
+                <label class="col-form-label-lg">Name</label>
+                <input type="text" class="form-control" maxlength="80" name="name">
+            </div>
+        </div>
+        <div class="py-5">
+            <button type="submit" class="btn btn-primary mt-4">Hinzufügen</button>
+        </div>
+    </form>
+</div>
