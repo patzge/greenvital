@@ -20,7 +20,12 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/startseite' },
+  '/start': { view: 'pages/index' },
 
+
+
+  'GET /admin': {view: 'pages/admin'},
+  'GET /shop': {view: 'pages/shop'},
 
   /***************************************************************************
   *                                                                          *
