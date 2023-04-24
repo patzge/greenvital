@@ -143,7 +143,7 @@ body {
   
   /* offers */
   #offers{
-      background: url(../images/offer_img.jpg) center/cover no-repeat;
+      background: url(../images/offer_img_2.jpg) center/cover no-repeat;
   }
   #offers .row{
       min-height: 60vh;
