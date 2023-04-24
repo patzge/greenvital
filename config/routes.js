@@ -21,8 +21,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/startseite' },
-  '/start': { view: 'pages/index' },
+  '/': { view: 'pages/index' },
+  /*'/start': { view: 'pages/index' },*/
   'GET /shop': {view: 'pages/shop'},
 
 
