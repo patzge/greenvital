@@ -53,10 +53,21 @@ module.exports.datastores = {
     adapter: 'sails-mysql',
     host: '193.196.53.194',
     port: 33061,
+    user: 'user10_prod',
+    password: 'r100103',
+    database: 'greenvital_prod'
+
+    /*
+    adapter: 'sails-mysql',
+    host: '193.196.53.194',
+    port: 33061,
     user: 'user10_test',
     password: 'r116103',
     database: 'greenvital_test'
+    */
+
   },
 
 
 };
+
