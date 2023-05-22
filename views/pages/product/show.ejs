@@ -1,0 +1,51 @@
+<div class="container">
+    <div class = "title py-5">
+        <h2 class = "position-relative d-inline-block">Produkteintrag anzeigen</h2>
+    </div>
+    <div class="pb-3">
+        <div>
+            <div class="row">
+                <div class="col-4">
+                    Name
+                </div> 
+                <div class="col-8">
+                    <%= product.name %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    Preis
+                </div> 
+                <div class="col-8">
+                    <%= product.price %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    Beschreibung
+                </div> 
+                <div class="col-8">
+                    <%= product.description %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    Anzahl
+                </div> 
+                <div class="col-8">
+                    <%= product.quantity %>
+                </div>
+            </div>
+            <% if(product.category) { %>
+                <div class="row">
+                    <div class="col-4">
+                        Kategorie
+                    </div> 
+                    <div class="col-8">
+                        <%= product.category.name %>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+</div>

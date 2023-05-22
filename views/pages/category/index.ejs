@@ -1,0 +1,29 @@
+<div class="container">
+    <div class = "title py-5">
+        <h2 class = "position-relative d-inline-block">Kategorien</h2>
+    </div>
+
+    <div class="item-content">
+        <table class="table">
+            <thead>
+                <th>Name</th>
+            </thead>
+            <tbody>
+                <% categories.forEach(function(category){ %>
+                    <tr>
+                        <td>
+                            <%= category.name %>
+                        </td>
+                        <td>
+                            <a href = "/category/<%= category.id %>/destroy" class = "btn btn-primary py-1">Löschen</a>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <div class="py-5">
+            <a class="btn btn-primary" href="/category/new">Hinzufügen</a>
+        </div>
+    </div>
+</div>
+</div>
