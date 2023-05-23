@@ -8,6 +8,8 @@
  * https://sailsjs.com/docs/concepts/policies
  */
 
+const viewAdminOverview = require("../api/controllers/admin/view-admin-overview");
+
 module.exports.policies = {
 
   /***************************************************************************
