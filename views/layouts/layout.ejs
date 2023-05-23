@@ -70,35 +70,46 @@
               <span class = "navbar-toggler-icon"></span>
           </button>
 
-          <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
-              <ul class = "navbar-nav mx-auto text-center">
-                  <li class = "nav-item px-2 py-2">
-                      <a class = "nav-link text-uppercase text-dark" href = "/">Start</a>
-                  </li>
-                  <li class = "nav-item px-2 py-2">
-                      <a class = "nav-link text-uppercase text-dark" href = "/shop">Produkte</a>
-                  </li>
-                  <li class = "nav-item px-2 py-2">
-                      <a class = "nav-link text-uppercase text-dark" href = "/#about">Über uns</a>
-                  </li>
-                  <li class = "nav-item px-2 py-2 border-0">
-                      <a class = "nav-link text-uppercase text-dark" href = "/admin">Admin</a>
-                  </li>
-                  <li class = "nav-item px-2 py-2 border-0">
-                    <a class = "nav-link text-uppercase text-dark" href = "/login">login</a>
+        <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+            <ul class = "navbar-nav mx-auto text-center">
+                <li class = "nav-item px-2 py-2">
+                    <a class = "nav-link text-uppercase text-dark" href = "/">Start</a>
                 </li>
+                <% if(req.me) { %>
+                <li class = "nav-item px-2 py-2">
+                    <a class = "nav-link text-uppercase text-dark" href = "/shop">Produkte</a>
+                </li>
+                <% } %>
+                <li class = "nav-item px-2 py-2">
+                    <a class = "nav-link text-uppercase text-dark" href = "/#about">Über uns</a>
+                </li>
+                <% if(req.me) { %>
+                    <% if(req.me.isSuperAdmin) { %>
+                        <li class = "nav-item px-2 py-2 border-0">
+                            <a class = "nav-link text-uppercase text-dark" href = "/admin">Admin</a>
+                        </li>
+                    <% } %>
+                <% } %>
+                <% if(!req.me) { %>
                 <li class = "nav-item px-2 py-2 border-0">
-                  <a class = "nav-link text-uppercase text-dark" href = "/account">account</a>
-              </li>
-              <li class = "nav-item px-2 py-2 border-0">
-                <a class = "nav-link text-uppercase text-dark" href = "/logout">logout</a>
-            </li>
-            <li class = "nav-item px-2 py-2 border-0">
-              <a class = "nav-link text-uppercase text-dark" href = "/signup">signup</a>
-          </li>
-          
+                <a class = "nav-link text-uppercase text-dark" href = "/login">login</a>
+                </li>
+                <% } %>
+                <% if(req.me) { %>
+                    <li class = "nav-item px-2 py-2 border-0">
+                    <a class = "nav-link text-uppercase text-dark" href = "/account">account</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2 border-0">
+                    <a class = "nav-link text-uppercase text-dark" href = "/logout">logout</a>
+                    </li>
+                <% } %>
+                <% if(!req.me) { %>
+                <li class = "nav-item px-2 py-2 border-0">
+                <a class = "nav-link text-uppercase text-dark" href = "/signup">signup</a>
+                </li>
+                <% } %>
               </ul>
-          </div>
+        </div>
       </div>
   </nav>
   <!-- end of navbar -->
@@ -220,72 +231,6 @@
           </div>
       </div>
   </footer>
-<!--
-<body>
-  <header class="navbar navbar-expand-sm navbar-dark bg-dark flex-column flex-md-row justify-content-between" purpose="page-header">
-    <a style="cursor: pointer;" class="navbar-brand mr-0" href="/"><img style="height: 20px;" class="logo" alt="NEW_APP_NAME logo" src="/images/logo.png"/></a>
-    <div class="navbar-nav flex-row">
-    --><!-- LOGGED-IN NAVIGATION -->
-      <!--<% if(req.me) { %>
-      <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/contact">Help</a>
-      --><!-- Added Block für Super user Navigation-->
-      <!--<% if(req.me.isSuperAdmin) { %>
-        <div class="nav-item dropdown d-none d-sm-block">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Speisekarte</a>
-          <div style="left: auto; right: 0;" class="dropdown-menu" aria-labelledby="header-account-menu-link">
-            <a class="dropdown-item" href="/meal">Speisen</a>
-            <a class="dropdown-item" href="/category">Kategorien</a>
-          </div>
-        </div>
-        <% } %>
-      --><!-- Only in desktop nav -->
-      <!--<div class="nav-item dropdown d-none d-sm-block">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Account
-        </a>
-        a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a -->
-        <!--<div style="left: auto; right: 0;" class="dropdown-menu" aria-labelledby="header-account-menu-link">
-          <a class="dropdown-item" href="/account">Settings</a>
-          <a class="dropdown-item" href="/logout">Sign out</a>
-        </div>
-      </div>
-    --><!-- Only in mobile nav -->
-      <!--<a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/account">Account Settings</a>
-      <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Sign out</a>
-      <% } else { %>
-      --><!-- LOGGED-OUT NAVIGATION -->
-      <!--<a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/faq">FAQ</a>
-      <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Log in</a>
-      --><!-- Only in desktop nav -->
-      <!--<div class="form-inline d-none ml-2 d-md-block" >
-        <a class="btn btn-outline-info" href="/signup">Sign up</a>
-      </div>
-    --><!-- Only in mobile nav -->
-      <!--<a class="nav-item nav-link text-info ml-2 d-block d-md-none" href="/signup">Sign up</a>
-      <% } %>
-    </div>
-  </header>
-  <%- body %>
-    <footer class="footer-container">
-      <div class="footer-item">
-        Strandbad Kattenhorn<BR>
-        Strandbadstr. 8<BR>
-        78337 Kattenhorn<BR>
-        <p class="kontakt">
-          Telefon 0049 7735 67770<BR>
-          strandbad@kattenhorn.de<BR>
-        </p>
-      </div>
-      <div class="footer-item">
-        <ul>
-          <li>Preisliste</li>
-          <li>Impressum</li>
-          <li>Datenschutz</li>
-        </ul>
-      </div>
-    </footer>
-  -->
 
     <!--
         Client-side Templates
@@ -355,8 +300,6 @@
     <script src="/dependencies/sails.io.js"></script>
     <script src="/dependencies/bootstrap.bundle.min.js"></script>
     <script src="/dependencies/bootstrap.min.js"></script>
-    <script src="/dependencies/jquery-3.6.4.js"></script>
-    <script src="/dependencies/script.js"></script>
     <!--SCRIPTS END-->
 </body>
 

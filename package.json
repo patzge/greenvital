@@ -1,5 +1,5 @@
 {
-  "name": "tutorial-3",
+  "name": "project",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -9,12 +9,12 @@
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
     "grunt": "1.0.4",
-    "sails": "^1.5.0",
+    "sails": "^1.5.4",
     "sails-hook-grunt": "^5.0.0",
     "sails-hook-organics": "^2.2.1",
     "sails-hook-orm": "^4.0.0",
     "sails-hook-sockets": "^2.0.0",
-    "sails-mysql": "^3.0.0"
+    "sails-mysql": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "5.16.0"
@@ -28,11 +28,11 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/meiglspe/tutorial-3.git"
+    "url": "git://github.com/anonymous node/sails user/project.git"
   },
-  "author": "meiglspe",
+  "author": "anonymous node/sails user",
   "license": "",
   "engines": {
-    "node": "^14.17"
+    "node": "^18.15"
   }
 }
