@@ -1,33 +1,33 @@
 <div id="edit-profile" v-cloak>
   <account-notification-banner></account-notification-banner>
   <div class="container pt-5 pb-5">
-    <h1>Update personal info</h1>
+    <h1>Persönliche Daten aktualisieren</h1>
     <hr/>
     <form action="/updateProfile" method="POST">
       <div class="row">
         <div class="col-sm-6">
           <div class="form-group">
-            <label for="full-name">Full name</label>
+            <label for="full-name">Vollständiger Name</label>
             <input class="form-control" id="full-name" name="fullName" type="text"  placeholder="Sturgis P. Sturgeon" autocomplete="name" focus-first value="<%= req.me.fullName %>">
-            <div class="invalid-feedback">Please enter your full name.</div>
+            <div class="invalid-feedback">Bitte tragen Sie Ihren vollen Namen ein.</div>
           </div>
         </div>
         <div class="col-sm-6">
           <div class="form-group">
-            <label for="email-address">Email address</label>
+            <label for="email-address">E-Mail-Addresse</label>
             <input class="form-control" id="email-address" name="emailAddress" type="email" placeholder="sturgeon@example.com" autocomplete="email" value="<%= req.me.emailAddress %>">
-            <div class="invalid-feedback">Please enter a valid email address.</div>
+            <div class="invalid-feedback">Bitte geben Sie eine gültige E-Mail-Adresse ein.</div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6">
-          There is already an account using that email address.
+          Es gibt bereits ein Konto mit dieser E-Mail-Adresse.
         </div>
         <div class="col-sm-6">
           <div class="form-group text-right">
-            <a class="btn btn-outline-info" href="/account">Cancel</a>
-            <button type="submit"  class="btn btn-dark">Save changes</button>
+            <a class="btn btn-outline-info" href="/account">Abbrechen</a>
+            <button type="submit"  class="btn btn-dark">Änderungen speichern</button>
           </div>
         </div>
       </div>
