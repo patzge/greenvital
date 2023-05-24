@@ -17,7 +17,7 @@ module.exports = {
         quantity:{
             type: 'number',
             columnType: 'DECIMAL (6,0)',
-            required: true
+            //required: true
         },
         category: {
             model: 'category'

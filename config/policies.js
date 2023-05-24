@@ -8,7 +8,7 @@
  * https://sailsjs.com/docs/concepts/policies
  */
 
-const viewAdminOverview = require("../api/controllers/admin/view-admin-overview");
+// const viewAdminOverview = require("../api/controllers/admin/view-admin-overview");
 
 module.exports.policies = {
 
@@ -24,6 +24,10 @@ module.exports.policies = {
   // Bypass the `is-logged-in` policy for:
   'entrance/*': true,
   'account/logout': true,
+
+  CatalogController: {
+    '*': true,
+  },
 
   ProductController: {
     '*': 'is-super-admin',

@@ -49,7 +49,8 @@ module.exports.routes = {
 
   '/': { view: 'pages/index' },
 
-  'GET /shop': {view: 'pages/shop'},
+  //'GET /shop': {view: 'pages/shop'},
+  'GET /catalog': { controller: 'CatalogController', action: 'catalog'},
 
   /***************************************************************************
   *                                                                          *
@@ -77,4 +78,20 @@ module.exports.routes = {
   'POST /category': { controller: 'CategoryController', action:'create' },
   'GET /category/:id/destroy': { controller: 'CategoryController', action: 'destroyOne' },
   'GET /category': { controller: 'CategoryController', action: 'find' },
+
+
+  /***************************************************************************
+  *                                                                          *
+  *       Shopping Basked API                                                *
+  *                                                                          *
+  ***************************************************************************/
+
+  'GET /shopping': { action: 'view-catalog-shopping' },
+  
+  'GET /api/category': { action: 'api/category/index'},
+
+  'GET /api/basket': {  action:'api/basket/get' },
+  'POST /api/basket': {  action:'api/basket/add' },
+  'POST /api/address': {  action:'api/basket/post-address' },
+  'GET /api/order': {  action:'api/basket/order' },
 };
