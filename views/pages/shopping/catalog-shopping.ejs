@@ -24,7 +24,9 @@
     })
 
     // 5. Create and mount the root instance.
-    const app = Vue.createApp({})
-    app.use(router)
-    app.mount('#app')
+    const app = Vue.createApp({});
+    const vuetify = Vuetify.createVuetify();
+    app.use(router);
+    app.use(vuetify);
+    app.mount('#app');
 </script>
