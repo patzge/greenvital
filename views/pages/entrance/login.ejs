@@ -5,18 +5,17 @@
       <hr/>
       <form action="login" method="POST">
         <div class="form-group">
-          <input type="email" name="emailAddress" class="form-control" placeholder="Email address" autocomplete="email" focus-first>
+          <input type="email" name="emailAddress" class="form-control" placeholder="Email address" autocomplete="email" focus-first required>
           <div class="invalid-feedback">Bitte geben Sie eine gültige E-Mail Adresse an.</div>
         </div>
         <div class="form-group">
-          <input name="password" type="password" class="form-control" placeholder="Password" autocomplete="current-password">
+          <input name="password" type="password" class="form-control" placeholder="Password" autocomplete="current-password" required>
           <div class="invalid-feedback">Bitte geben Sie Ihr Passwort ein.</div>
         </div>
         <div class="form-group form-check">
           <input class="form-check-input" type="checkbox" id="remember" name="rememberMe"/>
           <label class="form-check-label" for="remember">An mich Erinnern</label>
         </div>
-        <span>Die von Ihnen eingegebenen Anmeldeinformationen sind keinem Konto zugeordnet. Bitte überprüfen Sie Ihre E-Mail-Adresse und/oder Ihr Passwort und versuchen Sie es erneut.</span>
         <div class="form-group">
           <button type="submit"class="btn-dark btn-lg btn-block">Anmelden</button>
         </div>

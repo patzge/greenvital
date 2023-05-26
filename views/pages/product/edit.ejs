@@ -3,19 +3,19 @@
         <div>
             <div class="form-group">
                 <label class="col-form-label-lg">Name</label>
-                <input type="text" class="form-control" maxlength="80" value="<%= product.name %>" name="name">
+                <input type="text" class="form-control" maxlength="80" value="<%= product.name %>" name="name" required>
             </div>
             <div class="form-group">
                 <label class="col-form-label-lg">Preis</label>
-                <input type="text" class="form-control" maxlength="8" value="<%= product.price %>" name="price">
+                <input type="text" class="form-control" maxlength="8" value="<%= product.price %>" name="price" required>
             </div>
             <div class="form-group">
                 <label class="col-form-label-lg">Beschreibung</label>
-                <input type="text" maxlength="255" class="form-control" size="40" value="<%= product.description %>" name="description">
+                <input type="text" maxlength="255" class="form-control" size="40" value="<%= product.description %>" name="description" required>
             </div>
             <div class="form-group">
                 <label class="col-form-label-lg">Anzahl</label>
-                <input type="text" maxlength="255" class="form-control" size="40" value="<%= product.quantity %>" name="quantity">
+                <input type="text" maxlength="255" class="form-control" size="40" value="<%= product.quantity %>" name="quantity" required>
             </div>
             <div class="form-group">
                 <label class="col-form-label-lg">Kategorie</label>
