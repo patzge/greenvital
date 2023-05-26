@@ -8,6 +8,7 @@
     import Address from "/vue/address.js";
     import Checkout from "/vue/checkout.js";
     import Confirmation from "/vue/confirmation.js";
+    import catalogentrycomponent from '/vue/catalogentry.js'
 
 
     const routes = [
@@ -26,6 +27,7 @@
     // 5. Create and mount the root instance.
     const app = Vue.createApp({});
     const vuetify = Vuetify.createVuetify();
+    app.component("catalogentry", catalogentrycomponent);
     app.use(router);
     app.use(vuetify);
     app.mount('#app');
