@@ -29,7 +29,6 @@ module.exports = {
       this.req.session.basket = [];
     } 
     this.req.session.basket.push(product);
-    // All done.
     return;
 
   }

@@ -15,7 +15,6 @@ export default {
       
           <div class = "special-img position-relative overflow-hidden">
               <img src = "images/VeganDesigner.png" class = "w-100">
-              
           </div>
           <div class = "text-center">
               <p class = "text-capitalize mt-3 mb-1">{{ product.name }}</p>
