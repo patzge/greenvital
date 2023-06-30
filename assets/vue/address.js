@@ -34,7 +34,9 @@ export default {
   },
   template: `
     <div class="container">
-      <h1>Lieferdaten</h1>
+    <div class = "title text-center py-5">
+    <h2 class = "position-relative d-inline-block">Lieferdaten</h2>
+</div>
       <v-sheet class="mx-auto">
         <v-form>
           <v-text-field v-model="name" :rules="rules" label="Name"></v-text-field>

@@ -11,7 +11,7 @@ export default {
         let url = new URL(origin + '/api/order');
         fetch(url)
         .then(res => res.json())
-        .then(this.$router.push("/confirmation"))
+        .then(this.$router.push("/confirmation"));
       }
     },  
     created() {
@@ -26,13 +26,17 @@ export default {
     },
     template: `
     <div class="container">
-      <div class="h2">Bestellung</div>
+    <div class = "title text-center py-5">
+    <h2 class = "position-relative d-inline-block">Bestellung</h2>
+    </div>
 
       <ul class="list-group mb-4">                
         <li class="list-group-item" v-for="item in basket">{{ item.name }}</li>
       </ul>
 
-      <div class="h2">Lieferdaten</div>
+      <div class = "title text-center py-5">
+                <h2 class = "position-relative d-inline-block">Lieferdaten</h2>
+        </div>
         <div class="h4">
             Name: {{ name }}
         </div>

@@ -14,7 +14,9 @@ export default {
 
   },  
   template: `
-    <h1>Einkaufskorb</h1>
+  <div class = "title text-center py-5">
+  <h2 class = "position-relative d-inline-block">Einkaufskorb</h2>
+  </div>
     <div class="mx-4">
     <ul class="list-group mb-4">                
       <li class="list-group-item" v-for="item in basket">{{ item.name }}</li>

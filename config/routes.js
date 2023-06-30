@@ -49,7 +49,6 @@ module.exports.routes = {
 
   '/': { view: 'pages/index' },
 
-  //'GET /shop': {view: 'pages/shop'},
   'GET /catalog': { controller: 'CatalogController', action: 'catalog'},
 
   /***************************************************************************
@@ -94,4 +93,5 @@ module.exports.routes = {
   'POST /api/basket': {  action:'api/basket/add' },
   'POST /api/address': {  action:'api/basket/post-address' },
   'GET /api/order': {  action:'api/basket/order' },
+  'POST /api/basket/delete': {  action:'api/basket/delete' },
 };

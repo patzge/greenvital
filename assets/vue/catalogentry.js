@@ -11,24 +11,19 @@ export default {
         }
     },
     template: `
-              <div class="mt-2">
-                  <div class="h4">{{ product.name }}</div>
-                  <div class="d-flex justify-content-between">
-                      <div class="h6">{{ product.description }} 
-                        <span class="ml-1" v-if="product.image" @click="toggleDialog()">(Bild anzeigen)</span>
-                      </div>
-                      <div>
-                          <span class="h6"> {{ product.price }} &euro;</span>
-                          <span :id="product.id" class="ml-2 btn btn-outline-primary" @click="$emit('order', product.id)">Bestellen</span>
-                      </div>
-                      <p></p>
-                      <div class="dialog" v-if="dialog">
-                        <div class="dialog-content">    
-                        <button @click="toggleDialog()" class="close-icon" >x</button>
-                        <img :src="'https://wetebucket.s3.us-west-2.amazonaws.com/'+product.image">
-                        </div>
-                      </div>
-                  </div>
-            </div>`
+
+      
+          <div class = "special-img position-relative overflow-hidden">
+              <img src = "images/VeganDesigner.png" class = "w-100">
+              
+          </div>
+          <div class = "text-center">
+              <p class = "text-capitalize mt-3 mb-1">{{ product.name }}</p>
+              <p class = "text-capitalize mt-3 mb-1">{{ product.description }}</p>
+              <span class = "fw-bold d-block">{{ product.price }} &euro;</span>
+              <span :id="product.id" class="ml-2 btn btn-outline-primary" @click="$emit('order', product.id)">Bestellen</span>
+          </div>`
+
+    /* <img :src="'https://wetebucket.s3.us-west-2.amazonaws.com/'+product.image" class="w-100"> */
   };
   
